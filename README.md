@@ -35,7 +35,7 @@ both tools recruiters ask for.
 
 ## Live dashboard
 
-[Tableau Public link — add after publishing]
+[Retail Sales Dashboard — 2024 on Tableau Public](https://public.tableau.com/app/profile/abatar.bhattarai/viz/RetailSalesDashboard2024_17946829544680/RetailSalesDashboard)
 
 ## Skills used
 
