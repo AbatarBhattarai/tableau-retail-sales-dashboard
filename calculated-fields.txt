@@ -1,0 +1,27 @@
+Tableau calculated fields — Retail Sales Dashboard
+Data: retail_orders_clean.csv (1,200 orders, Jan-Dec 2024)
+Field names are the CSV column names.
+
+Total Revenue
+  SUM([revenue])
+  Check: $118,568.75 with no filter on.
+
+Total Orders
+  COUNT([order_id])
+  Check: 1,200.
+
+Average Order Value
+  [Total Revenue] / [Total Orders]
+  Check: $98.81.
+
+Month
+  DATETRUNC('month', [order_date])
+  Use on Columns for the monthly trend (continuous month).
+
+MoM Revenue Change %  (table calculation, monthly sheet only)
+  (SUM([revenue]) - LOOKUP(SUM([revenue]), -1)) / ABS(LOOKUP(SUM([revenue]), -1))
+  Format as %. Check: Nov 2024 = +73.2%.
+
+Category Share %  (table calculation, category sheet only)
+  SUM([revenue]) / TOTAL(SUM([revenue]))
+  Format as %. Check: Clothing = 31.2%.
